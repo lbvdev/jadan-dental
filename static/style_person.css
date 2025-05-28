@@ -1,0 +1,30 @@
+.page-2-person{
+        background-color: var(--color-bg);
+        padding: 90px 110px;
+        gap: 64px;
+        max-width: 100%;
+    
+
+    }
+    .education{
+        .point{
+            p{
+                position: relative;
+            }
+            p::before{
+                content: '';
+                position: absolute;
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background-color: #657E95;
+                border-radius: 50%;
+                margin-right: 10px;
+                position: relative;
+            }
+        }
+    }
+    p b{
+        font-size: 20px;
+        font-weight: 600;
+    }

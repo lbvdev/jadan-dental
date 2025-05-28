@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Наша команда - {% endblock title %}
+
+
+{% block pages %}
+
+<div class="page-1-success flex-cl pattern-bg">
+    <h1>Заявка успешно отправлена!</h1>
+    <p>
+        Перенаправляем обратно через
+        <span id="currentsecond">3</span>
+    </p>
+    <div class="success-mark">
+        <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.3.0/dist/dotlottie-wc.js" type="module"></script>
+        <dotlottie-wc src="https://lottie.host/17b6e012-29b2-462b-ad7d-44dc14764789/X66IO155q5.lottie" autoplay loop></dotlottie-wc>
+    </div>
+    
+</div>
+
+{% endblock pages %}
+
+
+{% block footer %}
+{% endblock footer %}
+
+
+{% block script %}
+
+<script>
+    let seconds = 3;
+    const el = document.getElementById("currentsecond");
+
+    const countdown = setInterval(() => {
+        el.textContent = seconds;
+        seconds--;
+        if (seconds < 1) {
+            clearInterval(countdown);
+        }
+    }, 1000);
+
+    setTimeout(() => {
+        window.location.href = "/";
+    }, 4000);
+</script>
+
+{% endblock script %}

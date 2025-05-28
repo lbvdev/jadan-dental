@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+
+{% block pages %}
+
+<div class="page-1 flex pattern-bg">
+    <div class="left-side flex-cl">
+        <h1>Идеальная улыбка ближе, чем вы думаете!</h1>
+        <p>Конечная цель нашей работы - ваша здоровая улыбка!  В первую очередь, мы – команда, поэтому в лечении пациентов принимают участие специалисты разных областей стоматологии. Мы выстраиваем наиболее продуктивный план лечения с прогнозированным результатом. </p>
+        <div class="button flex">
+            <a class="enable-popup">
+                <button class="fill white">Записаться</button>
+            </a>
+            <a href="#page-2">
+                <button class="outline blue">Читать о нас</button>
+            </a>
+        </div>
+    </div>
+    <div class="right-side flex">
+        <img src="{{ url_for('static', filename='source/man.png') }}">
+        <div class="divider-img"></div>
+    </div>
+    <!-- <img class="bg-pattern" src="{{ url_for('static', filename='source/bg-pattern.png') }}" alt=""> -->
+
+</div>
+<div class="page-2 flex" id="page-2">
+    <div class="left-side flex-cl" style="z-index: 2;">
+        <div class="text flex-cl">
+            <h1>Jadan Dental — это команда профессионалов</h1>
+            <p>В первую очередь, мы – команда, поэтому в лечении пациентов принимают участие специалисты разных областей стоматологии. Мы выстраиваем наиболее продуктивный план лечения с прогнозированным результатом. Варианты лечения всегда подбираются с учетом особенности каждого случая и в соответствии с эстетическими и функциональными пожеланиями пациента.</p>
+        </div>
+        <a href="/team">
+            <button class="outline white">Познакомиться с командой</button>
+        </a>
+    </div>
+    <div class="right-side flex-cl">
+        <h4>Конечная цель нашей работы - ваша здоровая улыбка</h4>
+        <div class="photos flex overflow-padding">
+            <a href="/team/daria" class="profile flex-cl">
+                <img src="{{ url_for('static', filename='source/picText1.svg') }}">
+                <img src="{{ url_for('static', filename='source/pic1.png') }}">
+            </a>
+            <a href="/team/anastasia" class="profile flex-cl">
+                <img src="{{ url_for('static', filename='source/picText2.svg') }}">
+                <img src="{{ url_for('static', filename='source/pic2.png') }}">
+            </a>
+            <a href="/team/jadan-igor" class="profile flex-cl">
+                <img src="{{ url_for('static', filename='source/picText3.svg') }}">
+                <img src="{{ url_for('static', filename='source/pic3.png') }}">
+            </a>
+            <a href="/team/jadan-anastasia" class="profile flex-cl">
+                <img src="{{ url_for('static', filename='source/picText4.svg') }}">
+                <img src="{{ url_for('static', filename='source/pic4.png') }}">
+            </a>
+            <div class="divider-img alt"></div>
+        </div>
+    </div>
+</div>
+<div class="page-3 flex">
+    <div class="left-side flex">
+        <img id="eliner-big" src="{{ url_for('static', filename='source/eliner.png') }}" alt="">
+        <img id="eliner-small" src="{{ url_for('static', filename='source/eliner2.png') }}" alt="">
+    </div>
+    <div class="right-side flex-cl">
+        <h1>Наша линейка элайнеров JD-LINE</h1>
+        <p>Элайнеры – это прозрачные каппы, применяемые для ортодонтической коррекции – 100процентная альтернатива брекетам. Они практически не заметны на зубах, так как полностью прозрачны. Снимаются и позволяют выполнить полноценный уход за полостью рта. </p>
+        <div class="button-wr flex">
+            <a href="/eliner">
+                <button class="outline white">Читать об элайнере</button>
+            </a>
+            <a class="enable-popup">
+                <button class="fill blue">Связаться с нами</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="page-5 flex">
+    <div class="left-side flex-cl">
+        <h1>Отзывы клиентов</h1>
+        <p>Наши клиенты нам доверяют Элайнеры – это прозрачные каппы, применяемые для ортодонтической коррекции – 100процентная альтернатива брекетам. Они практически не заметны на зубах, так как полностью прозрачны. Снимаются и позволяют выполнить полноценный уход за полостью рта. </p>
+    </div>
+    <div class="right-side flex">
+        <div class="review flex-cl">
+            <p>Лечил зубы в JadanDental и остался очень доволен! Доктор проявила профессионализм на высшем уровне, все мои проблемы были решены безболезненно и быстро. Больше не боюсь ходить к стоматологу.</p>
+            <div class="bottom-bar flex">
+                <p>Виктор</p>
+                <div class="stars-wr flex">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                </div>
+            </div>
+        </div>
+        <div class="review flex-cl">
+            <p>Хочу выразить благодарность всему персоналу стоматологии JadanDental за профессионализм и терпение во время моего лечения. Доктора очень внимательны и заботливы, они не только лечат зубы, но и поддерживают нас в трудную минуту. Результаты лечения меня просто поразили!</p>
+            <div class="bottom-bar flex">
+                <p>Лариса</p>
+                <div class="stars-wr flex">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                    <img src="{{ url_for('static', filename='source/starFull.svg') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-4 flex-cl">
+    <div class="head flex">
+        <h1>Наши услуги</h1>
+    </div>
+    <div id="services" class="services flex overflow-padding">
+        <div class="service active flex-cl">
+            <div class="service-head flex">
+                <h4>Первичная консультация</h4>
+                <button>60-90 мин.</button>
+            </div>
+            <p>В JD мы придерживаемся комплексного подхода к
+                лечению, лечим причины, а не симптомы.</p>
+            <div class="divider-height"></div>
+            <div class="service-foot flex">
+                <button class="enable-popup">Обратиться</button>
+                <p>1.000 ₽</p>
+            </div>
+        </div>
+        <div class="service flex-cl">
+            <div class="service-head flex">
+                <h4>Лечение кариеса</h4>
+                <button>60-90 мин.</button>
+            </div>
+            <p>Придерживаемся малоинвазивного подхода, ведь
+                ценим «биологический ресурс» тканей зубов.</p>
+            <div class="divider-height"></div>
+            <div class="service-foot flex">
+                <button class="enable-popup">Обратиться</button>
+                <p>от 12.900 ₽</p>
+            </div>
+        </div>
+        <div class="service flex-cl">
+            <div class="service-head flex">
+                <h4>Отбеливание зубов</h4>
+                <button>90-120 мин.</button>
+            </div>
+            <p>Мы работаем с самой безопасной системой
+                отбеливания – Opalescence BOOST.</p>
+            <div class="divider-height"></div>
+            <div class="service-foot flex">
+                <button class="enable-popup">Обратиться</button>
+                <p>от 12.900 ₽</p>
+            </div>
+        </div>
+        <div class="categories flex-cl">
+            <button class="category enable-popup">Лечение кариеса</button>
+            <button class="category enable-popup">Пародонтология</button>
+            <button class="category enable-popup">Детская стоматология</button>
+            <button class="category enable-popup">Протезирование</button>
+            <button class="category enable-popup">Другое</button>
+        </div>
+    </div>
+    <div class="foot flex">
+        <button class="outline white enable-popup">Записаться</button>
+        <p>Мы меняем традиционное понятие лечения зубов. Будь это лечение кариеса, пульпита, постановка импланта или фиксация винира — все манипуляции производятся с высочайшей точностью. </p>
+    </div>
+</div>
+{% endblock pages %}

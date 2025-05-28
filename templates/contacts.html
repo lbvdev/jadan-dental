@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+
+{% block pages %}
+
+<div class="page-1-contacts first-page flex pattern-bg">
+    <div class="left-side flex-cl">
+        <h1>Контакты</h1>
+        <div class="info flex">
+            <div class="flex-cl">
+                <p>Наш номер</p>
+                <a href="https://api.whatsapp.com/send/?phone=79111372073&text&type=phone_number&app_absent=0">
+                    <h4>+7 (911) 137-20-73</h4>
+                </a>
+            </div>
+            <div class="divider-v"></div>
+            <div class="flex-cl">
+                <p>Почта</p>
+                <a href="mailto:info@jadandental.ru">
+                    <h4>info@jadandental.ru</h4>
+                </a>
+            </div>
+        </div>
+        <div class="button-wr flex">
+            <a class="enable-popup">
+                <button class="fill white">Записаться</button>
+            </a>
+            <a href="https://yandex.ru/maps/-/CHRfyVzc">
+                <button class="outline blue">Открыть в Яндекс Картах</button>
+            </a>
+        </div>
+
+    </div>
+    <div class="right-side flex-cl">
+        <div class="head flex">
+            <h1>Как добраться</h1>
+            <p>г. Санкт-Петербург
+                Приморский проспект, 62, корпус 1</p>
+        </div>
+        <!-- <div id="map" style="width: 100%; height: 400px;"></div> -->
+        <div class="map flex">
+            <div style="border-radius: 18px;overflow:hidden; flex: 1;">
+                <iframe src="https://yandex.ru/map-widget/v1/?from=api-maps&ll=30.223594%2C59.981752&mode=poi&origin=jsapi21&poi%5Bpoint%5D=30.223762%2C59.982932&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D46388169423&z=17.0" width="1000" height="630" frameborder="0" allowfullscreen="true" style="position:relative;">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-2-contacts flex">
+    <div class="left-side">
+        <img src="{{ url_for('static', filename='source/girl.png') }}">
+    </div>
+    <div class="right-side">
+        <h1>Оставьте заявку</h1>
+        <form action="send" method="post" class="flex-cl">
+            <label for="name">Ваше имя*</label>
+            <input type="text" id="name" name="name" placeholder="Дмитрий" autocomplete="name" required>
+            <label for="phone">Номер телефона*</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___ __ __" pattern="\+7 \(\d{3}\) \d{3} \d{2} \d{2}" autocomplete="tel" required>
+            <label for="reason">Комментарий к обращению</label>
+            <input type="text" id="reason" name="reason" placeholder="Ваша причина">
+            <div class="flex" style="gap: 28px; margin-top: 40px;">
+                <p>Мы перезвоним вам на следующий день</p>
+                <input type="submit" value="Отправить заявку">
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://api-maps.yandex.ru/v3/?apikey=e08d1d20-5a07-441b-a07e-2e661846ffd3&lang=ru_RU"></script>
+<script>
+    async function initMap() {
+    await ymaps3.ready;
+    
+    const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+
+    const map = new YMap(
+        document.getElementById('map'),
+        {
+            location: {
+                center: [37.588144, 55.733842],
+                zoom: 10
+            }
+        }
+    );
+
+    map.addChild(new YMapDefaultSchemeLayer());
+}
+</script>
+{% endblock pages %}

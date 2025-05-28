@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Наша команда - {% endblock title %}
+
+
+{% block pages %}
+
+<div class="page-1 page-1-team pattern-bg flex">
+    <div class="left-side">
+        <h1>Наша команда</h1>
+        <div class="right-side team-alternative" style="display: none;">
+            <div class="photos flex overflow-padding">
+                <a href="/team/daria" class="profile flex-cl">
+                    <img src="{{ url_for('static', filename='source/picTextWhite1.svg') }}">
+                    <img src="{{ url_for('static', filename='source/pic1.png') }}">
+                </a>
+                <a href="/team/anastasia" class="profile flex-cl">
+                    <img src="{{ url_for('static', filename='source/picTextWhite2.svg') }}">
+                    <img src="{{ url_for('static', filename='source/pic2.png') }}">
+                </a>
+                <a href="/team/jadan-igor" class="profile flex-cl">
+                    <img src="{{ url_for('static', filename='source/picTextWhite3.svg') }}">
+                    <img src="{{ url_for('static', filename='source/pic3.png') }}">
+                </a>
+                <a href="/team/jadan-anastasia" class="profile flex-cl">
+                    <img src="{{ url_for('static', filename='source/picTextWhite4.svg') }}">
+                    <img src="{{ url_for('static', filename='source/pic4.png') }}">
+                </a>
+            </div>
+            <div class="divider-img alt border_left"></div>
+
+        </div>
+        <p>Jadan Dental это большая медицинская семья, которая появилась благодаря тесной работе и совместному обучению врачей, с годами сформировалась команда, готовая поддерживать преемственность и комплексно помогать пациентам.</p>
+        <p>Мы ориентируемся исключительно на командную работу и проводим совещания по каждому клиническому случаю, что позволяет достигать максимально эффективного и долговременного результата лечения.</p>
+        <div class="button flex">
+            <a class="enable-popup">
+                <button class="fill white">Записаться</button>
+            </a>
+            <a href="/">
+                <button class="outline blue">Читать о нас</button>
+            </a>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="photos flex overflow-padding">
+            <a href="/team/daria" class="profile flex-cl">
+                <img src="{{ url_for('static', filename='source/picTextWhite1.svg') }}">
+                <img src="{{ url_for('static', filename='source/pic1.png') }}">
+            </a>
+            <a href="/team/anastasia" class="profile flex-cl">
+                <img src="{{ url_for('static', filename='source/picTextWhite2.svg') }}">
+                <img src="{{ url_for('static', filename='source/pic2.png') }}">
+            </a>
+            <a href="/team/jadan-igor" class="profile flex-cl">
+                <img src="{{ url_for('static', filename='source/picTextWhite3.svg') }}">
+                <img src="{{ url_for('static', filename='source/pic3.png') }}">
+            </a>
+            <a href="/team/jadan-anastasia" class="profile flex-cl">
+                <img src="{{ url_for('static', filename='source/picTextWhite4.svg') }}">
+                <img src="{{ url_for('static', filename='source/pic4.png') }}">
+            </a>
+            <div class="divider-img alt"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock pages %}
