@@ -1,9 +1,3 @@
-# Project specific
-/static/videos/
-/static/backgrounds/
-/static/highlights/
-/static/previews/
-
 # MacOS
 .DS_Store
 
