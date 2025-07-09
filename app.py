@@ -1,5 +1,4 @@
 from flask import Flask, render_template, url_for, redirect, flash, request
-from telegramto import send_tg
 
 app = Flask(__name__)
 
@@ -46,22 +45,6 @@ def eliner():
 def success():
     return render_template('success.html')
 
-
-
-@app.post('/send')
-def send():
-    name = request.form.get('name')
-    phone = request.form.get('phone')
-    comment = request.form.get('comment')
-    send_tg(
-        {
-            'name': name,
-            'phone': phone,
-            'comment': comment
-        }
-    )
-    flash('Сообщение отправлено')
-    return redirect(url_for('success'))
 
 
 if __name__ == "__main__":

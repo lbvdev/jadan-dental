@@ -244,10 +244,16 @@ p, li{
     line-height: 160%;
     opacity: 0.85;
 }
+
 .gap-18{
     height: 18px;
     opacity: 1 !important;
 }
+.gap-12{
+    padding-top: 24px;
+    gap: 12px;
+}
+
 a{
     appearance: none;
     text-decoration: none;
