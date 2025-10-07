@@ -8,44 +8,40 @@ app.secret_key = 'mysecretkey'
 @app.get('/')
 @app.get('/landing')
 def landing():
-    return render_template('index.html')
+    return render_template('index.j2')
 
 @app.get('/contacts')
 def contacts():
-    return render_template('contacts.html')
+    return render_template('contacts.j2')
 
-@app.get('/team/daria')
-def daria():
-    return render_template('doctor-daria.html')
-
-@app.get('/team/anastasia')
-def anastasia():
-    return render_template('doctor-anastasia.html')
-
-@app.get('/team/jadan-igor')
-def igor():
-    return render_template('doctor-igor.html')
-
-@app.get('/team/jadan-anastasia')
-def jadan():
-    return render_template('doctor-jadan.html')
+@app.get('/team/<doctor>')
+def doctor_page(doctor):
+    template = f'doctors/{doctor}.j2'
+    try:
+        return render_template(template)
+    except:
+        return redirect(url_for('team'))
 
 @app.get('/team')
 def team():
-    return render_template('team.html')
-
-@app.get('/client')
-def client():
-    return render_template('client.html')
+    return render_template('team.j2')
 
 @app.get('/eliner')
 def eliner():
-    return render_template('eliner.html')
+    return render_template('eliner.j2')
+
+@app.get('/articles/<article>')
+def article_page(article):
+    template = f'articles/{article}.j2'
+    try:
+        return render_template(template)
+    except:
+        return redirect(url_for('landing'))
+
 
 @app.get('/success')
 def success():
-    return render_template('success.html')
-
+    return render_template('success.j2')
 
 
 @app.post('/send')
@@ -65,5 +61,4 @@ def send():
 
 
 if __name__ == "__main__":
-
-    app.run(debug=True, port='8000')
+    app.run(debug=True, port='5400')

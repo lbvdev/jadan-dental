@@ -56,5 +56,9 @@ def send_tg(form_data):
 def start_bot():
     bot.polling()
 
-bot_thread = threading.Thread(target=start_bot)
-bot_thread.start()
+#if __name__ == "__main__":
+#    try:
+#        bot_thread = threading.Thread(target=start_bot)
+#        bot_thread.start()
+#    except Exception as e:
+#        print(f"error {e}")

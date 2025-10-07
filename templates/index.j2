@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base.j2' %}
 
 {% block title %}{% endblock title %}
 
@@ -120,48 +120,45 @@
         <div class="service active flex-cl">
             <div class="service-head flex">
                 <h4>Первичная консультация</h4>
-                <button>60-90 мин.</button>
+                <button>35 мин</button>
             </div>
-            <p>В JD мы придерживаемся комплексного подхода к
-                лечению, лечим причины, а не симптомы.</p>
-            <div class="divider-height"></div>
-            <div class="service-foot flex">
-                <button class="enable-popup">Обратиться</button>
-                <p>1.000 ₽</p>
-            </div>
-        </div>
-        <div class="service flex-cl">
-            <div class="service-head flex">
-                <h4>Лечение кариеса</h4>
-                <button>60-90 мин.</button>
-            </div>
-            <p>Придерживаемся малоинвазивного подхода, ведь
-                ценим «биологический ресурс» тканей зубов.</p>
+            <p>Осмотр, диагностика и план лечения. Рентген и консультация врача.</p>
             <div class="divider-height"></div>
             <div class="service-foot flex">
                 <button class="enable-popup">Обратиться</button>
                 <p>от 12.900 ₽</p>
             </div>
         </div>
-        <div class="service flex-cl">
+        <a href="/articles/implantaciya-zubov" class="service flex-cl">
+            <div class="service-head flex">
+                <h4>Имплантация зубов</h4>
+                <button>2-3 часа</button>
+            </div>
+            <p>Восстановление зубов титановыми имплантами с пожизненной гарантией.</p>
+            <div class="divider-height"></div>
+            <div class="service-foot flex">
+                <button class="enable-popup" onclick="event.preventDefault(); event.stopPropagation();">Обратиться</button>
+                <p>от 12.900 ₽</p>
+            </div>
+        </a>
+        <a href="/articles/otbelivanie-zubov" class="service flex-cl">
             <div class="service-head flex">
                 <h4>Отбеливание зубов</h4>
-                <button>90-120 мин.</button>
+                <button>1-2 часа</button>
             </div>
-            <p>Мы работаем с самой безопасной системой
-                отбеливания – Opalescence BOOST.</p>
+            <p>Профессиональное отбеливание для ослепительной улыбки.</p>
             <div class="divider-height"></div>
             <div class="service-foot flex">
-                <button class="enable-popup">Обратиться</button>
+                <button class="enable-popup" onclick="event.preventDefault(); event.stopPropagation();">Обратиться</button>
                 <p>от 12.900 ₽</p>
             </div>
-        </div>
+        </a>
         <div class="categories flex-cl">
-            <button class="category enable-popup">Лечение кариеса</button>
-            <button class="category enable-popup">Пародонтология</button>
-            <button class="category enable-popup">Детская стоматология</button>
-            <button class="category enable-popup">Протезирование</button>
-            <button class="category enable-popup">Другое</button>
+            <a href="/articles/lechenie-vnchs" class="category">Лечение ВНЧС</a>
+            <a href="/articles/gnatologiya-v-stomatologii" class="category">Гнатология</a>
+            <a href="/articles/kompleksnoe-lechenie-zubov" class="category">Комплексное лечение</a>
+            <a href="/articles/protezirovanie-zubov" class="category">Протезирование</a>
+            <a href="/articles/udalenie-zuba" class="category">Удаление зубов</a>
         </div>
     </div>
     <div class="foot flex">

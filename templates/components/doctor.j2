@@ -1,0 +1,59 @@
+{% macro person_page(fullname, about1, about2, name, image, aboutme, citate, education, courses, certificates) %}
+
+<div class="page-1 flex pattern-bg">
+    <div class="left-side flex-cl">
+        <h1>{{ fullname }}</h1>
+        <p><b>{{ about1 }}</b></p>
+        <p>{{ about2 }}</p>
+        <div class="button flex">
+            <a class="enable-popup">
+                <button class="fill white">Записаться к {{ name }}</button>
+            </a>
+            <a href="/team">
+                <button class="outline blue">Смотреть всю команду</button>
+            </a>
+        </div>
+    </div>
+    <div class="right-side flex">
+        <img src="{{ url_for('static', filename=image) }}">
+        <div class="divider-img"></div>
+    </div>
+</div>
+
+<div class="page-2-person flex">
+    <div class="left-side flex-cl">
+        <div class="text flex-cl">
+            <h1>Образование</h1>
+            <div class="education flex-cl">
+                {% for item in education %}
+                <div class="point">
+                    <div class="educt"></div>
+                    <p>{{ item }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="gap-18"></div>
+            <p><b>Сертификаты</b></p>
+            <div class="certificates flex">
+                {% for cert in certificates %}
+                <img src="{{ url_for('static', filename=cert) }}" alt="Сертификат">
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="right-side flex-cl">
+        <h1>Обо мне</h1>
+        <p><b>{{ aboutme }}</b></p> 
+        <p>{{ citate }}</p>
+
+        <div class="gap-18"></div>
+
+        <p><b>Курсов повышения квалификации, стоматологические выставки и симпозиумы</b></p>
+        <p>
+            {% for course in courses %}
+            <li>{{ course }}</li>
+            {% endfor %}
+        </p>
+    </div>
+</div>
+{% endmacro %}

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base.j2' %}
 
 {% block title %}{% endblock title %}
 
@@ -58,11 +58,10 @@
             <label for="name">Ваше имя*</label>
             <input type="text" id="name" name="name" placeholder="Дмитрий" autocomplete="name" required>
             <label for="phone">Номер телефона*</label>
-            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___ __ __" pattern="\+7 \(\d{3}\) \d{3} \d{2} \d{2}" autocomplete="tel" required>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (▁▁▁) ▁▁▁ ▁▁ ▁▁" pattern="\+7 \(\d{3}\) \d{3} \d{2} \d{2}" autocomplete="tel" required>
             <label for="reason">Комментарий к обращению</label>
             <input type="text" id="reason" name="reason" placeholder="Ваша причина">
             <div class="flex" style="gap: 28px; margin-top: 40px;">
-                <p>Мы перезвоним вам на следующий день</p>
                 <input type="submit" value="Отправить заявку">
             </div>
         </form>

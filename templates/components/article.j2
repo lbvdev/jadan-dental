@@ -1,0 +1,20 @@
+{% macro article_page(title, image, text) %}
+<div class="page-1 page-1-alternative article-page flex pattern-bg">
+    <div class="left-side flex-cl">
+        <h1>{{ title }}</h1>
+        {% if image %}
+        <img src="{{ url_for('static', filename=image) }}">
+        {% endif %}
+        <div class="button flex">
+            <a class="enable-popup">
+                <button class="fill white">Обратиться</button>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="page-2" class="page-2 article-page page-2-alternative flex">
+    <div class="text-wrapper flex-cl">
+        {{ text }}
+    </div>
+</div>
+{% endmacro %}
