@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, redirect, flash, request
-from telegramto import send_tg
+from telegramto import send_tg, start_bot
+import threading
 
 app = Flask(__name__)
 
@@ -61,4 +62,11 @@ def send():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port='5400')
+    print('Starting bot...')
+    try:
+        bot_thread = threading.Thread(target=start_bot, daemon=True)
+        bot_thread.start()
+    except Exception as e:
+        print(f"error {e}")
+    print('Bot started')
+    app.run(debug=True, port='5400', use_reloader=False)
