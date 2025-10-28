@@ -192,6 +192,7 @@ button.outline.white{
 button:active{
     opacity: 0.5;
 }
+
 .pages{
     overflow: hidden;
 }
@@ -229,6 +230,26 @@ img{
     -webkit-user-drag: none;
 }
 
+button.call-to-action{
+    position: fixed;
+    z-index: 3;
+    bottom: 18px;
+    right: 18px;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border-radius: 50%;
+    background: linear-gradient(141deg, #04294A 5.56%, #0A62B0 98.87%);
+    color: white;
+    font-size: 24px;
+    transition: opacity 0.3s, transform 0.3s;
+    
+    &.hidden{
+        opacity: 0;
+        transform: translateY(100%);
+        pointer-events: none;
+    }
+}
 
 
 .flex-cl{

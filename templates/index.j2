@@ -1,7 +1,11 @@
 {% extends 'base.j2' %}
+{% from 'components/header.j2' import header_landing %}
 
 {% block title %}{% endblock title %}
 
+{% block header %}
+{{ header_landing() }}
+{% endblock header %}
 
 {% block pages %}
 
